@@ -1,1 +1,1 @@
-# SpotifyResume
+# SpotifyResumeApp
