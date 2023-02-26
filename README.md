@@ -10,7 +10,7 @@ All content in the app was pulled directly from my resume:
 
 
 
-##Demo
+## Demo
 
 
 https://user-images.githubusercontent.com/80544633/221427182-9cb5f621-111d-4d99-9bcf-d9986790a280.mov 
