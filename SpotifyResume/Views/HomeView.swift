@@ -10,12 +10,10 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var ListItems = ListViewModel()
-    @State private var isWESelected = false
-    @State private var isEducationSelected = false
-    @State private var isSISelected = false
-    @State private var isSkillsSelected = false
-    @State private var isProjectsSelected = false
+    @State private var isSelected = false
     @State private var searchText: [String] = []
+    @State private var searchTextTwo: String = ""
+    var typeList: [String] = ["Work Experience", "Education", "Student Involvement", "Projects", "Skills"]
     
     var filteredItems: [ListItem] {
         
@@ -33,6 +31,14 @@ struct HomeView: View {
         }
         
     }
+    
+    var filteredButtons: [String] {
+            if searchTextTwo.isEmpty {
+                return typeList
+            } else {
+                return typeList.filter { $0.localizedCaseInsensitiveContains(searchTextTwo) }
+            }
+        }
     
     
     var body: some View {
@@ -82,97 +88,38 @@ struct HomeView: View {
                     .padding()
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 5) {
-                            Button {
-                                withAnimation {
-                                    isWESelected.toggle()
-                                    searchText.append("Work Experience")
-                                    if !isWESelected {
-                                        searchText.removeAll(where: { $0 == "Work Experience"})
+                        
+                        
+                        
+                        HStack(spacing: 15) {
+                            
+                            ForEach(filteredButtons, id: \.self) { type in
+                                
+                                Button {
+                                    withAnimation {
+                                        searchTextTwo = type
+                                        isSelected.toggle()
+                                        searchText.append(type)
+                                        if !isSelected {
+                                            searchText.removeAll(where: { $0 == type})
+                                            searchTextTwo = ""
+                                        }
+                                        
                                     }
+                                } label: {
+                                    Text(type)
+                                        .minimumScaleFactor(0.8)
                                     
                                 }
-                            } label: {
-                                Text("Work Experience")
-                                    .minimumScaleFactor(0.8)
+                                .padding(10)
+                                .foregroundColor(Color.white)
+                                .background(isSelected ? Color.green : Color(0x242424))
+                                .clipShape(Capsule())
+                                
                             }
-                            .padding(10)
-                            .foregroundColor(Color.white)
-                            .background(isWESelected ? Color.green : Color(0x242424))
-                            .clipShape(Capsule())
-                            .frame(width: 130, height: 25)
                             
-                            Button {
-                                withAnimation {
-                                    isEducationSelected.toggle()
-                                    searchText.append("Education")
-                                    if !isEducationSelected {
-                                        searchText.removeAll(where: { $0 == "Education"})
-                                    }
-                                }
-                            } label: {
-                                Text("Education")
-                                    .minimumScaleFactor(0.8)
-                            }
-                            .padding(10)
-                            .foregroundColor(Color.white)
-                            .background(isEducationSelected ? Color.green : Color(0x242424))
-                            .clipShape(Capsule())
-                            .frame(width: 100, height: 25)
                             
-                            Button {
-                                withAnimation {
-                                    isSISelected.toggle()
-                                    searchText.append("Student Involvement")
-                                    if !isSISelected {
-                                        searchText.removeAll(where: { $0 == "Student Involvement"})
-                                    }
-                                }
-                            } label: {
-                                Text("Student Involvement")
-                                    .minimumScaleFactor(0.8)
-                            }
-                            .padding(10)
-                            .foregroundColor(Color.white)
-                            .background(isSISelected ? Color.green : Color(0x242424))
-                            .clipShape(Capsule())
-                            .frame(width: 150, height: 25)
-                            
-                            Button {
-                                withAnimation {
-                                    isProjectsSelected.toggle()
-                                    searchText.append("Projects")
-                                    if !isProjectsSelected {
-                                        searchText.removeAll(where: { $0 == "Projects"})
-                                    }
-                                }
-                            } label: {
-                                Text("Projects")
-                                    .minimumScaleFactor(0.8)
-                            }
-                            .padding(10)
-                            .foregroundColor(Color.white)
-                            .background(isProjectsSelected ? Color.green : Color(0x242424))
-                            .clipShape(Capsule())
-                            .frame(width: 80, height: 25)
-                            
-                            Button {
-                                withAnimation {
-                                    isSkillsSelected.toggle()
-                                    searchText.append("Skills")
-                                    if !isSkillsSelected {
-                                        searchText.removeAll(where: { $0 == "Skills"})
-                                    }
-                                }
-                            } label: {
-                                Text("Skills")
-                                    .minimumScaleFactor(0.8)
-                            }
-                            .padding(10)
-                            .foregroundColor(Color.white)
-                            .background(isSkillsSelected ? Color.green : Color(0x242424))
-                            .clipShape(Capsule())
-                            .frame(width: 60, height: 25)
+                           
                             
                             
                             Spacer()

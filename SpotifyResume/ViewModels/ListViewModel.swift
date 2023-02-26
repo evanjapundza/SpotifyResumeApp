@@ -61,7 +61,7 @@ class ListViewModel: ObservableObject {
         ]))
         
         //Projects
-        listItems.append(ListItem(company: "Phridge", type: "Projects", title: "Recipe Search App", date: "January 2023", image: "highres", descriptions: [
+        listItems.append(ListItem(company: "Phridge", type: "Projects", title: "Recipe Search App", date: "January 2023", image: "PhridgeIcon", descriptions: [
         "· Built entirely in Swift and SwiftUI with built-in iOS frameworks like CoreData",
         "· Unique search-by-ingredient recipe finder using Spoonacular API",
         "· Presents over 100 recipes in dating app style format each search",
@@ -77,5 +77,37 @@ class ListViewModel: ObservableObject {
         ]))
         
         //Skills
+        
+        
+        listItems.append(ListItem(company: "", type: "Skills", title: "Languages", date: "", image: "SwiftLogo", descriptions: [
+        "· Swift (UIKit/SwiftUI)",
+        "· Java",
+        "· Python",
+        "· C/C++",
+        "· SQL",
+        "· Ladder Logic"
+        ]))
+        
+        listItems.append(ListItem(company: "", type: "Skills", title: "Platforms", date: "", image: "iOSLogo", descriptions: [
+        "· iOS",
+        "· MacOS",
+        "· Windows",
+        "· UNIX"
+        ]))
+        
+        listItems.append(ListItem(company: "", type: "Skills", title: "Web Development", date: "", image: "JSLogo", descriptions: [
+        "· HTML",
+        "· CSS",
+        "· Javascript",
+        "· React",
+        "· Node.js"
+        ]))
+        
+        listItems.append(ListItem(company: "", type: "Skills", title: "Miscellaneous", date: "", image: "MiscIcon", descriptions: [
+        "· Student Pilot",
+        "· Microsoft Excel",
+        "· Programmable Logic Controllers",
+        "· Computer-aided Design"
+        ]))
     }
 }
