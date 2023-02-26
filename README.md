@@ -4,9 +4,15 @@ This application is strictly my resume - but made to mimic the Spotify app! See 
 
 It was created entirely in Swift using SwiftUI for the interface builder, and utilizes an MVVM design pattern.
 
+All content in the app was pulled directly from my resume:
+<img src="https://user-images.githubusercontent.com/80544633/221428029-76d56b30-6183-4bd9-9ae6-8e827b21cb04.jpg" width=25% height=25%>
 
 
-https://user-images.githubusercontent.com/80544633/221427182-9cb5f621-111d-4d99-9bcf-d9986790a280.mov    https://user-images.githubusercontent.com/80544633/221427194-8698f7c6-0d67-41f5-8daa-2bb72010bb95.mov
+
+##Demo
+
+
+https://user-images.githubusercontent.com/80544633/221427182-9cb5f621-111d-4d99-9bcf-d9986790a280.mov 
 
 https://user-images.githubusercontent.com/80544633/221427194-8698f7c6-0d67-41f5-8daa-2bb72010bb95.mov
 
