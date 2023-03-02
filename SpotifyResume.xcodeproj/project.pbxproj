@@ -11,7 +11,6 @@
 		DADF1A3529A66AD400316347 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF1A3429A66AD400316347 /* ContentView.swift */; };
 		DADF1A3A29A66AD800316347 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADF1A3929A66AD800316347 /* Preview Assets.xcassets */; };
 		DADF1A4529A66D4400316347 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF1A4429A66D4400316347 /* HomeView.swift */; };
-		DADF1A4729A66D5700316347 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF1A4629A66D5700316347 /* LibraryView.swift */; };
 		DADF1A4929A6D49B00316347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADF1A4829A6D49B00316347 /* Assets.xcassets */; };
 		DADF1A4B29A82BA600316347 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF1A4A29A82BA600316347 /* ListItem.swift */; };
 		DADF1A4E29A82CA700316347 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF1A4D29A82CA700316347 /* ListViewModel.swift */; };
@@ -24,7 +23,6 @@
 		DADF1A3429A66AD400316347 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DADF1A3929A66AD800316347 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DADF1A4429A66D4400316347 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		DADF1A4629A66D5700316347 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		DADF1A4829A6D49B00316347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Views/Assets.xcassets; sourceTree = "<group>"; };
 		DADF1A4A29A82BA600316347 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		DADF1A4D29A82CA700316347 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				DADF1A4429A66D4400316347 /* HomeView.swift */,
-				DADF1A4629A66D5700316347 /* LibraryView.swift */,
 				DADF1A4F29A9621E00316347 /* ItemView.swift */,
 			);
 			path = Views;
@@ -181,7 +178,6 @@
 				DADF1A4E29A82CA700316347 /* ListViewModel.swift in Sources */,
 				DADF1A4529A66D4400316347 /* HomeView.swift in Sources */,
 				DADF1A5029A9621F00316347 /* ItemView.swift in Sources */,
-				DADF1A4729A66D5700316347 /* LibraryView.swift in Sources */,
 				DADF1A3329A66AD400316347 /* SpotifyResumeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

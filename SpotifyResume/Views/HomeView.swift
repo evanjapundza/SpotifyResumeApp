@@ -47,7 +47,7 @@ struct HomeView: View {
             ZStack {
                 
                 Color(0x191414).ignoresSafeArea()
-                VStack {
+                VStack { // Contains all header items
                     
                     HStack {
                         Image("Me")
@@ -79,18 +79,13 @@ struct HomeView: View {
                             
                         }
                         
-                    
-                        
                         Spacer()
-                        
                         
                     }
                     .padding()
                     
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        
-                        
-                        
+                    ScrollView(.horizontal, showsIndicators: false) { //This scrollview is for the filter buttons
+
                         HStack(spacing: 15) {
                             
                             ForEach(filteredButtons, id: \.self) { type in
@@ -117,23 +112,14 @@ struct HomeView: View {
                                 .clipShape(Capsule())
                                 
                             }
-                            
-                            
-                           
-                            
-                            
+
                             Spacer()
                             
                         }
                         .padding(5)
                     }
                     
-                    //Spacer()
-                    
-                    
-                    
-                    
-                    List {
+                    List { //List of items, all filtered
                         ForEach(filteredItems, id:\.self) { item in
                             NavigationLink {
                                 ItemView(listItem: item)
